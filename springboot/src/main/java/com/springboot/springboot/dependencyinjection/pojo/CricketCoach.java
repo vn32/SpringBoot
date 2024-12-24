@@ -1,5 +1,6 @@
-package com.springboot.springboot.constructorinjection;
+package com.springboot.springboot.dependencyinjection.pojo;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
