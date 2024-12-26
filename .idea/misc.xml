@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/springboot/pom.xml" />
         <option value="$PROJECT_DIR$/learn-jpa-and-hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/ToDoListWebApp/pom.xml" />
       </list>
     </option>
   </component>
