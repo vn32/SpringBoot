@@ -1,5 +1,6 @@
 package com.springboot.springboot.lazyinitialization;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,6 +11,8 @@ import java.util.Arrays;
 
 @Component
 class EagerInitialization{
+    @Autowired
+    LazyInitialization lazyInitialization;
     public EagerInitialization(){
         System.out.println("EagerInitialization init");
     }
