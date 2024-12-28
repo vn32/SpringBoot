@@ -5,9 +5,11 @@ pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Hello</title>
+<title>Login Page</title>
 </head>
 <body>
-Hello Mr.
+<p> Welcome to Login Page! </p>
+using expression language
+Hello Mr. ${name}
 </body>
 </html>
