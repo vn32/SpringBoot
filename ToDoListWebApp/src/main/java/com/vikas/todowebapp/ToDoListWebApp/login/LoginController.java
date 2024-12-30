@@ -2,6 +2,7 @@ package com.vikas.todowebapp.ToDoListWebApp.login;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
+    //authenticate username and Password
+    @Autowired
+    private AuthenticationService authenticationService;
     //add a logger
     private Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -35,10 +39,11 @@ public class LoginController {
     public String goToWelcomePage(@RequestParam String name,@RequestParam String password,Model model) {
         //let's check for the dummy username and password
         //username:vikas, password:dummy
-        if(name.equals("vikas") && password.equals("dummy")){
+        if(authenticationService.authenticate(name,password)){
             model.addAttribute("name",name);
             return "welcome";
         }
+        model.addAttribute("errorMessage","Invalid credentials! Please try again.");
         return "login";
     }
 

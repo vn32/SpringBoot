@@ -9,6 +9,7 @@ pageEncoding="ISO-8859-1"%>
 </head>
 <body>
 <p> Welcome to Login Page! </p>
+<pre> ${errorMessage} </pre>
 <form method="post">
   <div class="container">
     <label for="name"><b>Username</b></label>
